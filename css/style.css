@@ -1,0 +1,431 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300&family=Permanent+Marker&display=swap');
+
+
+*{
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+	padding: 0;
+
+}
+:root {
+  --theme-color: white;
+  --primary-color: #124f88;
+  --secundary-color: #F7C331;
+  --text-color-inverse: white;
+  --text-color: black;
+  --navbar-shallow-color: #e5e5e5;
+  --menu-mobile-background-color: #3A4460;
+}
+
+	
+/*selectores de etiqueta*/
+html{
+	height: 100%;
+}
+body{
+	 font-family: "Public Sans", sans-serif;
+  font-size: 1.2rem;
+  min-height: 100%;
+	background-image: url('../img/background.jpg');	
+}
+.grid-container > * {
+  box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+}
+.header {
+  grid-area: header;
+  
+}
+
+.navbar {
+  grid-area: navbar;
+  background-color: #afd6af;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #fdcfcf;
+
+}
+.img-fluid{
+	width: 70%;
+	height: auto;
+
+}
+
+.main {
+  grid-area: main;
+  background-color: #f5f5f5;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #8c96a0;
+}
+
+.grid-container {
+  display: grid;
+  gap: 10px;
+  grid-template:
+    "header"  100px
+    "navbar"  50px
+    "main"    auto
+    "sidebar" 100px
+    "footer"  100px;
+}
+
+
+
+
+  .img{
+
+display:block;
+margin:auto;
+
+}
+
+
+.topheader{
+box-shadow: 0 4px 5px var(--);
+}
+
+.topnav{
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+	max-width: 980px;
+	margin: 0 auto;
+}
+
+/* logo */
+.logo{
+display: flex;
+align-items: center;
+font-size: 18px;
+font-weight: 500;
+color:var(--primary-color);
+}
+
+.logo img{
+ border-radius: 50%;
+}
+
+/*menu */
+
+.menu{
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 1rem 0;
+	
+	justify-content: flex-end;
+	aling-items: center;
+
+
+
+}
+.menu:hover{
+	
+transition: .5s all;
+}
+.menu li {
+
+	padding: 0 15px ;
+
+}
+
+.menu a{
+	color: var(--text-color);
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 50px;
+	text-transform: uppercase;
+
+}
+.open-menu,
+.close-menu{
+	display: none;
+}
+@media (max-width: 950px) {
+/*menu */
+
+.menu{
+	flex-direction: column;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	align-items: center;
+	background-color: #337DFF;
+	height: 100%;
+	overflow-y: auto;
+	opacity: 0;
+	cursor: pointer;
+	transition: opacity 0.3s;
+
+
+
+
+}
+
+.menu li {
+
+
+	padding: 0 15px ;
+
+}
+
+.menu a{
+	color: var(--text-color);
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 50px;
+	text-transform: uppercase;
+	line-height: 60px;
+}
+.open-menu,
+.close-menu{
+	display: block;
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+	body{
+		background-color: black;
+	}
+}
+.close-menu{
+	align-self: flex-end;
+	padding: 20px 15px;
+}
+.menu_opened {
+	opacity: 1;
+	pointer-events: all;
+}
+}
+.open-menu:focus:not(:focus-visible),
+.close-menu:focus:not(:focus-visible){
+outline:none;
+}
+
+h1,h2,h3{
+	color: violet;  
+	font-family:'Oxygen', sans-serif;
+}
+
+h1{
+	font-size: 4rem;
+}
+h2{
+	font-size: 3rem;
+}
+h3{
+	font-size: 2rem;
+}
+
+p{
+	color: grey;
+	font-weight: 300;
+	font-size: 2rem;
+	font-family: 'Permanent Marker', cursive;
+	line-height: 2.2rem;
+}
+
+.nav-list{
+	background: blueviolet;
+	box-shadow: 0px 0px 10px var(clr-gray200);
+	margin: 0;
+	padding: 1rem 0;
+	border-radius: var(--rodius);
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.nav-item{
+	list-style: none;
+	margin-right: 2rem;
+	background-color: white;
+transition: .5s all;
+}
+
+}
+
+.nav-item a{
+	text-decoration: none;
+	color: white;
+}
+
+.nav-item:first child{
+margin-right: auto;
+margin-left: 2rem;
+
+}
+
+.encabezado nav ul li a:hover{
+color: darkred;
+font-weight: 600;
+}
+
+.textDestacado{
+	background-color: rgba(255, 252, 0, .4);
+}
+
+.textBold{
+	font-weight: 600;
+}
+
+/* selectores de clase*/
+.text-center{
+	color: white;
+	text-align: center;
+	border: 4px solid rebeccapurple;
+  padding: .10em;
+}
+
+.text-dos{
+	color: white;
+	text-align: center;
+	border: 4px solid rebeccapurple;
+  padding: .10em;
+}
+
+.text-right{
+	text-align: right;
+}
+.text-left{
+	text-align: left;
+}
+
+.text-italic{
+	font-style: italic;
+}
+
+.bgLight{
+	background-color:rgba(243, 240, 240, .8) ;
+}
+
+.bgDark{
+	background-color: rgba(195, 190, 190, .8);
+}
+/*.w100{
+	width: 100%;			
+}*/
+/*selector de ID*/
+/*#nosotros{
+	background-color: rgba(243, 240, 240, 0.4);
+}*/
+/*Clases BEM */
+.encabezado__box--white{
+	text-align: center;
+	background-color: black;
+	/*padding*/
+	padding: 12px 0;
+	  /*relleno para padding-top/bottom y padding-right-left*/
+}
+.encabezado__img--fluid{
+	/*size*/
+	width: 100%;
+}
+
+.novedades__titulo--xxl{
+	font-size: 4rem;
+}
+
+.novedades__titulo--xl{
+	font-size: 3rem;
+}
+
+.novedades__titulo--md{
+	font-size: 2rem;
+	/*margin*/
+	
+}
+
+/*Box model - width- height - margin - padding - border*/
+/*Overflox*/
+/*box-sizing*/
+.novedades__articulo{
+	width: 90%; /*ancho*/
+	height: auto; /*alto*/
+	
+	margin: 20px auto; 
+	border: solid 4px white	;
+	padding: 20px 30px;  
+	box-sizing: border-box;
+}
+
+.pie{
+	/*padding*/
+	padding: 30px; 
+	color: white; 
+}
+
+.pie__icon--sm{
+	/*size*/
+	width: 30px;  /*ancho*/
+}
+
+.pie__titulo--md{
+	/*display*/
+	display: inline-block;
+	margin-right: 20px;
+	font-size: 2rem;
+}
+
+.pie a{
+	text-decoration: none; }
+
+.lista__box--white{
+
+	color: white;
+	border: 4px solid rebeccapurple;
+  padding: .5em;	
+}
+
+.datos{
+	color: white;
+	border: 2px solid rebeccapurple;
+  padding: .5em;
+}
+.info{
+	color: white;
+	border: 2px solid rebeccapurple;
+  padding: .5em;
+}
+.tableclass{
+	color: white;
+	display: flex;
+	border: 2px solid rebeccapurple;
+  padding: .5em;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 250px;
+	margin: 10px;
+}		
+.foto-productos{
+	width: 100px;
+
+}
+@media screen and (max-width: 700px) {
+header{
+	height: 20vh;
+	display: flex;
+	flex-direction: column;
+ }
+ header .logo{
+	width: 100px; height: 100px;}
+	background-color: white;
+
+}
+
+header .nav-container{
+	height: 40%;
+	width: 100%;
+	background-color: white;
+}
+
